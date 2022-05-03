@@ -1,0 +1,379 @@
+body {
+margin: 0;
+  background-color: lightblue;
+  color: midnightblue;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+/* This code is for the whole of the page (Colour of the page, text colour, font.)
+i have set the background colour to light blue to give the page an overall blue style and
+to also compliment the dark blue colour of the texts on the whole page. 
+*/
+
+
+nav {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: grey;
+}
+
+/* The coding above is for the menu, however this is for the space for the menu and
+the surrounding area of it. The styling codes allow the menu to look like it is stacked
+on top of each other going down in order of page. The background colour is set to grey
+to compliment the dark midnight blue colour of the text.
+*/
+
+li a {
+  display: block;
+  color: midnightblue;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/*the coding above is styling codes for the words in the menu. Here, it shows the colour
+to be midnight blue. I have also aligned the text of the menu to be centred. This
+is so that it maintains tidiness and professionalism.
+*/
+
+li a:hover {
+  background-color: Black;
+}
+
+/*this code above is for the menu bar that features on all 4 of the pages. here it
+is simply just a code that turns the colour of the hovered-over button to turn black.
+
+
+
+
+
+/*Home Page*/
+
+div.Gallery {
+  border: 1px solid black;
+}
+
+div.Gallery img {
+  width: 100%;
+}
+
+/* The two following codes above are specifically for the gallery (Image and text).
+Here, we can see that borders were added to separate the text adn images from colliding
+with the other pictures and text on the page. The width is set to 100% to allow the content
+inside to go right to the end of the borders and leave no space.
+*/
+
+div.Description {
+  padding: 15px;
+  text-align: center;
+}
+
+/* The styling is specifically just for the text description within the images.
+here i have added padding to make sure that there was a bit of space between the
+border of the picture and the extra space where the text is supposed to be. The
+text is also aligned centrally as seen through the code. all these elements were
+put in place to make the gallery look professional and tidy.
+*/
+
+.shoe {
+  padding: 0 6px;
+  float: left;
+  width: 25%;
+}
+
+/* The shoe styling code is for all of the individual pictures and text within the page.
+here we can see that i have used the float left element to allow the picture and text to not
+be crammed into one another.
+*/
+
+
+
+
+
+/*Upcoming Releases Page*/
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* the CSS styling above allows the images within the gallery to be positioned neatly
+in line with all the content in the whole page including the captions of the text and
+the thumbnail images in the whole gallery.
+*/
+
+
+.container {
+  position: relative;
+}
+
+
+/*The CSS styling above allows all of the contents of the page to be positioned
+in the centre of the screen rather than just scattered across the whole screen becoming
+unorganised. The coding allows the arrows to be positioned correctly in their place.
+*/
+
+
+.mySlides {
+  display: none;
+}
+
+/*The codes above are set for the main images used in the main screen gallery.
+As two of the same shoe images are present on the page at the same time. the code
+hides the images so that it can only be visible and show one of the pictures
+when the user interacts with the buttons or clicks on the display images beneath
+the enlarged pictures.
+*/
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* The CSS styling above is simply for the cursor that appears when the cursor is
+hovering over the images of the gallery. In this case it has been set to a pointer
+to let the user knows the different images can be clicked on and navigated without
+having to use th earrow buttons on either side of the image.
+*/
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/*The codes above are for the actual buttons themselves. i have enlarged the buttons
+so that it can be easily seen by the viewer of the website. i have also set the style
+of the arrows to be thickened by setting the font weight to bold. The colours of the
+arrows have been set to white so it whilst it compliments the shade of black, and to also
+be easily visible and not harsh on the viewer.
+*/
+
+
+/* button positioning */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/*the codes above is to position the buttons according to their allocated places.
+in this case, the previous button is placed on the left hand side of the picture
+whereas the next button is placed on the right hand side of the pictures to allow the
+user to navigate.
+*/
+
+
+/* buttons on hover */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*The Codes above only apply to the next and previous button when it is hovered on.
+the colour chosen is black as it isn't a harsh colour and to let the user know
+that the button is being hovered over. it is also see-through to still allow the
+original button colours to still be thorough and full.
+*/
+
+
+/* Number text (1/6) */
+.numbertext {
+  color: midnightblue;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* the codes above are for the numbertexts that label which picture is which in the
+sequence totalling to 6. i have given the font size a big number so that it clearly
+shows to the viewer and it is not hidden in the corner of the page where it cant be seen.
+i have also set the colour to midnight blue to keep the same consistency as the whole page.
+*/
+
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The codes above are for the captions for each the 6 images in the rolling gallery.
+the caption container codes are to allows the cpation to be prominent underneath the
+main image but above all the 6 images. the background colour where the text sits on
+has a black colour to make it known that there is a caption.
+
+the row after elements allow the content to be separated from each other to prevent
+jamming but at the same time fill out any empty space.
+*/
+
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.6%;
+}
+
+/*the singular code above is for the pictures to be stuck together side by side
+neatly for display on the page and that it is pushed out right towards the edge of the screen.
+ This makes the gallery look neat and put together rather than just small gaps.
+*/
+
+
+/*thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* The styling codes for this is for the the thumbnail images underneath the main screen
+of the displayed image.
+*/
+
+
+
+/*Crep Protect Page*/
+
+nav {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: lightgray;
+}
+
+
+
+li a {
+  display: block;
+  color: midnightblue;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: black;
+}
+
+
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery {
+border: 1px solid #ccc;
+}
+
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.Desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.crepProtect {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+
+
+
+
+
+/*Contact Page*/
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+/* This CSS part is for all the text inputs on the contact page. The styling codes
+were put in place to make sure that there was an even enough gap to maintain a casual
+yet professional looking contact page.
+*/
+
+
+input[type=submit] {
+  background-color: midnightblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* The CSS codes above are for the submit button when it isn't hovered on.
+  the  above styling codes are to ensure that on the page it looks a big button
+  rather than just an easy make shift button. the cursor style is to allow the
+cursor to turn into a pointer when it is hovered on top of the button.
+*/
+
+input[type=submit]:hover {
+  background-color: grey;
+}
+
+/* the above styling code is for the submit button at the end of the page, however
+this only shows when the button is hovered over. In this case, it turns into the
+chosen background colour which is grey.
+*/
+
+.ContactForm {
+  border-radius: 5px;
+  background-color: lightblue;
+  padding: 20px;
+}
+
+/* This stylihg code is for the actual contact form itself rather than the whole page.
+in this case, i have set the background colour to lightblue so that the form and the page
+keep a consistent colour theoughout and so that it does not look peculiar. */

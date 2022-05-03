@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="CSS/STYLE.CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+
+<h1>Kickin' it with JB</h1>
+<nav>
+  <li><a href="Home.html">Home </a></li>
+  <li><a href="Sneaker Releases.HTML">Sneaker Releases</a></li>
+  <li><a href="Crep Protect.HTML">Crep Protect©</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+</nav>
+
+<h1>Contact</h1>
+
+
+<div class="ContactForm">
+
+
+<form action="/action_page.php">
+
+<label for="Title">Title</label>
+<select id="Title" name="Title">
+<option value="Please Select...">Please Select...</option>
+<option value="Mr">Mr</option>
+<option value="Mrs">Mrs</option>
+<option value="Miss">Miss</option>
+<option value="Ms">Ms</option>
+<option value="Dr">Dr</option>
+</select>
+
+<!--This part of the contact form is the title part of someones name. In this element
+i used a select ID element to create the the box needed for the user to input their answer.
+
+the option value element was used multiplke times on this occasion to give the user multiple
+answers that applies to them. this was done individually for each title.
+-->
+
+<br><br><br>
+
+   <label for="fname">First Name</label>
+   <input type="text" id="fname" name="firstname" placeholder="Type Here..">
+<br><br><br>
+
+   <label for="lname">Last Name</label>
+   <input type="text" id="lname" name="lastname" placeholder="Type Here..">
+
+<br><br><br>
+
+   <label for="WhereAreYouFrom">Where Are You From?</label>
+   <input type="text" id="WhereAreYouFrom" name="Where Are You From?" placeholder="Type Here..">
+
+<br><br><br>
+
+   <label for="Email">Email</label>
+   <input type="text" id="Email" name="Email" placeholder="Type Here..">
+
+<br><br><br>
+
+   <label for="MobileNumber">Mobile Number</label>
+   <input type="text" id="MobileNumber" name="Mobile Number" placeholder="Type Here..">
+
+<br><br><br>
+
+<!-- the following code above was for the text and answer boxes in the contact form.
+the element tag 'input type' is important as it creates the small area for the user
+to type in the information needed to fill out the form.
+-->
+
+
+   <p>Click on the "Choose File" button to upload your favourite Sneaker!:</p>
+
+   <form action="/action_page.php">
+     <input type="file" id="myFile" name="filename">
+     <input type="submit">
+   </form>
+
+<!-- The code above is a different type of tags needed for the page. In this case
+What differs this type of input from the text is that it is replaced with a file input,
+this means that instead of typing it allows the user to select a file from their saved
+documents to upload onto the form.
+-->
+<br><br><br>
+
+   <label for="WhyDoyouLikeTheShoe?">Why Do You Like The Shoe?</label>
+   <br><br>
+       <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+<!--This part of the contact form is the same as the other text input. The only difference
+with this is that it the text box for this requires a long answer. To allow this, a small
+style element was included here which was the height of the text box.
+-->
+
+<br><br><br>
+ <input type="submit" value="Submit">
+
+<!--the last part of the contact form is the submit button at the end of all online forms.
+To do this, a simple input type names submit was put to create the button. 
+-->
+</div>
+
+
+
+
+
+
+
+  </body>
+</html>

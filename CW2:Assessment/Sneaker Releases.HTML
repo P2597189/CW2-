@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <link rel="stylesheet" href="CSS/STYLE.CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+
+<h1>Kickin' it with JB</h1>
+<nav>
+  <li><a href="Home.html">Home </a></li>
+  <li><a href="Sneaker Releases.HTML">Sneaker Releases</a></li>
+  <li><a href="Crep Protect.HTML">Crep Protect©</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+</nav>
+
+
+<h1>Sneaker Release Calendar</h1>
+
+
+
+
+<div class="container">
+<!-- for the sneaker releases page, i used a main container labelled 'Container'
+within this, it will feature the Slideshow gallery content. This idea and layout
+was with 'W3School' https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp
+ -->
+  <div class="mySlides">
+
+    <img src="IMAGE/jordan 6 infrared.jpeg" style="width:70%"  alt="Jordan 6">
+    <div class="numbertext">1/6</div>
+  </div>
+
+<!-- within the div class myslides, it will show the picture as well as what number
+the picture is out of all the images in the gallery. the number text div class is placed
+within the myslides div as it
+-->
+  <div class="mySlides">
+
+    <img src="IMAGE/j1 fragment.jpeg" alt="Jordan 1 Frag" style="width:70%"  alt="Jordan 1 Frag">
+    <div class="numbertext">2/6</div>
+  </div>
+
+  <div class="mySlides">
+    <img src="IMAGE/J1 Mocha.png" style="width:70%" alt="Jordan 1 Mocha">
+    <div class="numbertext">3/6</div>
+  </div>
+
+  <div class="mySlides">
+    <img src="IMAGE/yeezy350.jpeg" style="width:70%" alt="yeezy350">
+    <div class="numbertext">4/6</div>
+  </div>
+
+  <div class="mySlides">
+    <img src="IMAGE/Jordan 1 Blue Chill.jpeg" style="width:70%"  alt="Jordan 1 Blue Chill">
+    <div class="numbertext">5/6</div>
+  </div>
+
+  <div class="mySlides">
+    <img src="IMAGE/NikeDunk.jpeg" style="width:70%"  alt="Nike Dunk Ben & Jerrys">
+    <div class="numbertext">6/6</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#8592;</a>
+  <a class="next" onclick="plusSlides(1)">&#8594;</a>
+
+<!-- the anchor class elements are usex specifially to add arrows to the slideshow
+, this is so that the user is able to navigate through the pictures. the design
+of the arrows are found next to the closing <a ></a> tags '&#8594;'
+ -->
+
+ <div class="caption-container">
+   <p id="caption"></p>
+ </div>
+
+ <!-- this div class is used in the gallery as a caption for each individual shoe
+ in the gallery. The text that will be in the caption will be the name of the
+ shoe and the release date for the shoes.
+-->
+
+</div>
+
+<div class="row">
+   <div class="column">
+     <img class="demo cursor" src="IMAGE/jordan 6 infrared.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Jordan 6 Infrared (July 23rd 2022)">
+   </div>
+   <div class="column">
+     <img class="demo cursor" src="IMAGE/j1 fragment.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Jordan 1 Fragment (June 19th 2022)">
+   </div>
+   <div class="column">
+     <img class="demo cursor" src="IMAGE/J1 Mocha.png" style="width:100%" onclick="currentSlide(3)" alt="Jordan 1 Dark Mocha (February 14th 2023)">
+   </div>
+   <div class="column">
+     <img class="demo cursor" src="IMAGE/yeezy350.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Yeezy 350 MX Rock (August 26th 2022)">
+   </div>
+   <div class="column">
+     <img class="demo cursor" src="IMAGE/Jordan 1 Blue Chill.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Jordan 1 Blue Chill (July 17th 2022)">
+   </div>
+   <div class="column">
+     <img class="demo cursor" src="IMAGE/NikeDunk.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Nike Dunk Ben & Jerrys (October 28th 2022)">
+   </div>
+ </div>
+
+<!--
+The Div show above is for the images that will appear below the main screen of the
+images and will be lined up in order of the sequence.
+
+in the div class 'row' it will contain the thumbnail images of the shoes seen
+in the div class 'column'. In each of the img classes there is an onclick element
+, this allows the user to click on the thumbnail picture and it will bring up the picture
+on the main viewing screen.
+-->
+
+
+<script>
+
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+/* This specific javascript element is used to show the main image in full out of all
+the pictures in the gallery
+*/
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+/* This piece of javascript allows the buttons 'next' and 'previous' to be used
+as intended and navigate forwards and backwards between the images in the gallery.
+*/
+
+function currentSlide(n) {
+  showSlides (slideIndex = n)
+}
+
+/* This javascript code allows the user to click the images manually to view the image
+specifically instead of having to click the arrows multiple times to get to the
+desired image wanted
+*/
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName ("mySlides")
+  let dots = document.getElementsByClassName ("demo")
+  let captionText = document.getElementById ("caption")
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+
+/*Similar to the first element in the javascript code. This feature shows the main
+screen that displays all the pictures within the gallery including the description
+of each picture, the number of the picture in the sequence, and the images itself.
+*/
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  /* This code maintains tidiness within the gallery as when the user clicks on an
+  image it will display the clicked image below the already displayed image instead
+  of overlaying.
+  */
+
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace("active", "")
+}
+
+/* this code allows the user to see which picture is selected in the gallery
+at the bottom of the screen. e.g the displaying image will be highlighted whereas
+the others will have the same opacity.
+*/
+
+slides[slideIndex-1].style.display="block";
+dots[slideIndex-1].className += " active";
+captionText.innerHTML= dots[slideIndex-1].alt;
+}
+
+
+
+</script>
+
+  </body>
+</html>
